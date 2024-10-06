@@ -82,69 +82,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trueque y Venta de Libros</title>
+    <title>Sección de Bienvenida</title>
     <style>
-        /* Estilos para la sección hero */
-        .hero {
-            background-color: #FF914D; /* Fondo naranjado */
-            color: white;
-            padding: 80px 20px;
+        /* Estilos para la sección de bienvenida */
+        .welcome-section {
+            background-color:white; /* Color naranjado atractivo */
+            color: black;
+            padding: 60px 20px;
             text-align: center;
-            background-image: url('fondo-libros.jpg'); /* Imagen de fondo (cámbiala por la tuya) */
-            background-size: cover;
-            background-position: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 70vh; /* Ajuste de altura */
-            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Sombra oscura superpuesta para mejorar legibilidad */
         }
 
-        /* Estilos para el título */
-        .hero h1 {
+        /* Estilos para el título de la bienvenida */
+        .welcome-section h1 {
             font-size: 48px;
             margin-bottom: 20px;
             font-weight: bold;
         }
 
-        /* Estilos para la descripción */
-        .hero p {
+        /* Estilos para el párrafo */
+        .welcome-section p {
             font-size: 20px;
             margin-bottom: 40px;
             max-width: 600px;
             line-height: 1.6;
         }
 
-        /* Estilos para el botón de llamada a la acción */
-        .hero .cta-btn {
-            background-color: #FFD1B2;
-            color: #FF6F3C;
-            font-size: 18px;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease;
+        /* Estilos para la imagen */
+        .welcome-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+            transition: transform 0.3s ease; /* Efecto de transformación suave */
         }
 
-        .hero .cta-btn:hover {
-            background-color: #FF6F3C;
+        .welcome-image:hover {
+            transform: scale(1.05); /* Efecto hover que agranda la imagen */
+        }
+
+        /* Estilos para el modal de la imagen agrandada */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
             color: white;
+            font-size: 30px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-
-<!-- Sección Hero -->
-<section class="hero">
-    <h1>Descubre, Trueca y Vende Libros</h1>
+      <!-- Sección de bienvenida -->
+<section class="welcome-section">
+    <h1> Descubre, Trueca y Vende Libros </h1>
     <p>Intercambia tus libros favoritos, descubre nuevas lecturas y únete a nuestra comunidad de amantes de libros. ¡Encuentra historias inolvidables hoy mismo!</p>
-    <a href="#" class="cta-btn">Empezar Ahora</a>
+    
+    <!-- Imagen que se agranda al hacer clic -->
+    <img src="bienvenida.jpg" alt="Imagen de Bienvenida" class="welcome-image" id="welcomeImg">
 </section>
 
+<!-- Modal para la imagen agrandada -->
+<div class="modal" id="imgModal">
+    <span class="close" id="closeModal">&times;</span>
+    <img id="modalImg">
+</div>
+
+<script>
+    // Obtener elementos de la imagen y el modal
+    const welcomeImg = document.getElementById('welcomeImg');
+    const imgModal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeModal = document.getElementById('closeModal');
+
+    // Función para agrandar la imagen al hacer clic
+    welcomeImg.onclick = function () {
+        imgModal.style.display = "flex";
+        modalImg.src = this.src;
+    }
+
+    // Función para cerrar el modal
+    closeModal.onclick = function () {
+        imgModal.style.display = "none";
+    }
+</script>
 </body>
 </html>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -158,6 +207,7 @@
             justify-content: space-between;
             padding: 20px;
             gap: 20px;
+            border-color: #FF6F3C;
         }
 
         /* Estilos para las columnas */
@@ -271,6 +321,8 @@
         imgModal.style.display = "none";
     }
 </script>
+
 </body>
 </html>
+
 
