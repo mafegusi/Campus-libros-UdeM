@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intercambio y Venta de Libros - Universidad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #003366;
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            max-height: 80px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            background-color: #005bb5;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #007bff;
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <!-- Espacio para el logo de la universidad -->
+        <img src="logo_universidad.png" alt="Logo Universidad">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Quiénes Somos</a></li>
+            <li><a href="#">Libros</a></li>
+            <li><a href="#">Promociones</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Bienvenidos al Portal de Intercambio y Venta de Libros</h1>
+    <p>Aquí podrás encontrar una amplia variedad de libros usados que otros estudiantes de la universidad ofrecen para intercambio o venta.</p>
+</main>
+
+<footer>
+    <p>&copy; 2024 Universidad - Intercambio y Venta de Libros</p>
+</footer>
+
+</body>
+</html>
