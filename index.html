@@ -179,6 +179,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección con Dos Columnas</title>
+    <style>
+        /* Estilos para la sección */
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilos para las columnas */
+        .column {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Estilos para la columna de la imagen */
+        .column img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Estilos para la columna de texto */
+        .column-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Estilos para que sea responsivo en pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .two-columns {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .column {
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sección con Dos Columnas -->
+<section class="two-columns">
+    <!-- Primera columna: Imagen -->
+    <div class="column">
+        <img src="frase1.jpg" alt="Descripción de la imagen">
+    </div>
+
+    <!-- Segunda columna: Texto -->
+    <div class="column column-text">
+        <p>
+            Esta profunda frase nos recuerda lo fácil que es pasar la vida deseando cosas, algunas grandes, otras imposibles... pero ¿cuántas veces olvidamos lo más importante? Solo tenemos una vida. Una oportunidad para hacer que nuestros deseos se transformen en acciones. No dejes que pase sin aprovechar cada instante. ¡Encuentra lo que realmente importa y comienza a vivir hoy!
+        </p>
+    </div>
+</section>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección con Dos Columnas</title>
+    <style>
+        /* Estilos para la sección */
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilos para las columnas */
+        .column {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Estilos para la columna de la imagen */
+        .column img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Estilos para la columna de texto */
+        .column-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Estilos para que sea responsivo en pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .two-columns {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .column {
+                padding: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sección con Dos Columnas -->
+<section class="two-columns">
+    <!-- Primera columna: Texto -->
+    <div class="column column-text">
+        <p>
+            "La verdadera belleza está en lo que no se puede poseer. Descubre lo que te inspira y atrévete a alcanzarlo."
+        </p>
+    </div>
+
+    <!-- Segunda columna: Imagen -->
+    <div class="column">
+        <img src="frase2.jpg" alt="Descripción de la imagen">
+    </div>
+</section>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sección de Producto</title>
     <style>
         /* Estilos para la sección de dos columnas */
@@ -491,6 +628,117 @@
         }
     });
 </script>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer con Redes Sociales</title>
+    <style>
+        /* Estilos para el footer */
+        footer {
+            background-color: #FF914D; /* Fondo naranjado */
+            padding: 40px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Contenedor del footer */
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Sección de Mapa del Sitio y Contacto */
+        .footer-content .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-content .info h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-content .info a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+
+        .footer-content .info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para la sección de redes sociales */
+        .footer-content .social {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-content .social a {
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .footer-content .social a i {
+            font-size: 24px;
+            color: white;
+        }
+
+        .footer-content .social a i:hover {
+            color: #FFC299; /* Color más claro al pasar el mouse */
+        }
+
+        /* Estilos para mantener el footer responsivo */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-content .social {
+                margin-top: 20px;
+            }
+        }
+    </style>
+    <!-- Vinculación a los iconos de redes sociales desde Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <!-- Sección de Mapa del Sitio y Contacto -->
+        <div class="info">
+            <h4>Mapa del Sitio</h4>
+            <a href="#">Inicio</a>
+            <a href="#">Quiénes Somos</a>
+            <a href="#">Libros</a>
+            <a href="#">Promoción</a>
+            <a href="#">Contacto</a>
+        </div>
+
+        <div class="info">
+            <h4>Contacto</h4>
+            <a href="mailto:info@campuslibros.com">info@campuslibros.com</a>
+            <a href="tel:+123456789">+123 456 789</a>
+        </div>
+
+        <ul class="footer-social">
+            <h4>Síguenos</h4>
+            <li><a href="https://www.instagram.com/campus_librosudm/profilecard/?igsh=MXV3aW0xamM4eTc0Yg==" target="_blank">instagram<i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.twitter.com" target="_blank">X<i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com" target="_blank">facebook<i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>
-
