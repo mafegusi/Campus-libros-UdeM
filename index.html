@@ -172,28 +172,8 @@
     <span class="close" id="closeModal">&times;</span>
     <img id="modalImg">
 </div>
-
-<script>
-    // Obtener elementos de la imagen y el modal
-    const welcomeImg = document.getElementById('welcomeImg');
-    const imgModal = document.getElementById('imgModal');
-    const modalImg = document.getElementById('modalImg');
-    const closeModal = document.getElementById('closeModal');
-
-    // Función para agrandar la imagen al hacer clic
-    welcomeImg.onclick = function () {
-        imgModal.style.display = "flex";
-        modalImg.src = this.src;
-    }
-
-    // Función para cerrar el modal
-    closeModal.onclick = function () {
-        imgModal.style.display = "none";
-    }
-</script>
 </body>
 </html>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -302,27 +282,215 @@
     <span class="close" id="closeModal">&times;</span>
     <img id="modalImg">
 </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos con Botón de Comprar</title>
+    <style>
+        /* Estilos para la galería */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+
+        /* Estilos para cada tarjeta de la galería */
+        .gallery-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos para la imagen */
+        .gallery-card img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-card img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Estilos para el botón Comprar */
+        .buy-btn {
+            display: block;
+            width: calc(100% - 40px);
+            margin: 20px;
+            padding: 10px 0;
+            background-color: #FF914D;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            background-color: #FF6F3C;
+        }
+
+        /* Estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .close {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #FF6F3C;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .gallery {
+                padding: 20px;
+            }
+
+            .buy-btn {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sección de Galería de Fotos -->
+<section class="gallery">
+    <!-- Tarjeta 1 -->
+    <div class="gallery-card">
+        <img src="libro1.jpg" alt="Foto 1" class="gallery-img">
+        <a href="#" class="buy-btn">Comprar</a>
+    </div>
+    <!-- Tarjeta 2 -->
+    <div class="gallery-card">
+        <img src="libro2.jpg" alt="Foto 2" class="gallery-img">
+        <a href="#" class="buy-btn">Comprar</a>
+    </div>
+    <!-- Tarjeta 3 -->
+    <div class="gallery-card">
+        <img src="libro3.jpg" alt="Foto 3" class="gallery-img">
+        <a href="#" class="buy-btn">Comprar</a>
+    </div>
+    <!-- Tarjeta 4 -->
+    <div class="gallery-card">
+        <img src="libro4.jpg" alt="Foto 4" class="gallery-img">
+        <a href="#" class="buy-btn">Comprar</a>
+    </div>
+    <!-- Tarjeta 5 -->
+    <div class="gallery-card">
+        <img src="libro5.jpg" alt="Foto 5" class="gallery-img">
+        <a href="#" class="buy-btn">Comprar</a>
+    </div>
+    <!-- Tarjeta 6 -->
+    <div class="gallery-card">
+        <img src="libro6.jpg" alt="Foto 6" class="gallery-img">
+        <a href="#" class="buy-btn">Comprar</a>
+    </div>
+    <!-- Tarjeta 7 -->
+    <div class="gallery-card">
+        <img src="libro7.jpg" alt="Foto 7" class="gallery-img">
+        <a href="#" class="buy-btn">Comprar</a>
+    </div>
+    <!-- Tarjeta 8 -->
+    <div class="gallery-card">
+        <img src="libro8.jpg" alt="Foto 8" class="gallery-img">
+        <a href="#" class="buy-btn">Comprar</a>
+    </div>
+    <!-- Tarjeta 9 -->
+    <div class="gallery-card">
+        <img src="libro9.jpg" alt="Foto 9" class="gallery-img">
+        <a href="#" class="buy-btn">Comprar</a>
+    </div>
+    <!-- Tarjeta 10 -->
+    <div class="gallery-card">
+        <img src="libro10.jpg" alt="Foto 10" class="gallery-img">
+        <a href="#" class="buy-btn">Comprar</a>
+    </div>
+</section>
+
+<!-- Modal para la imagen agrandada -->
+<div class="modal" id="imgModal">
+    <div class="modal-content">
+        <button class="close" id="closeModal">&times;</button>
+        <img id="modalImg" src="" alt="Imagen Agrandada">
+    </div>
+</div>
 
 <script>
-    // Obtener elementos de la imagen y el modal
-    const productImg = document.getElementById('productImg');
+    // Obtener todas las imágenes de la galería
+    const images = document.querySelectorAll('.gallery-img');
     const imgModal = document.getElementById('imgModal');
     const modalImg = document.getElementById('modalImg');
     const closeModal = document.getElementById('closeModal');
 
-    // Función para agrandar la imagen al hacer clic
-    productImg.onclick = function () {
-        imgModal.style.display = "flex";
-        modalImg.src = this.src;
-    }
+    // Agregar evento de clic a cada imagen
+    images.forEach((img) => {
+        img.addEventListener('click', () => {
+            imgModal.style.display = "flex";
+            modalImg.src = img.src;
+        });
+    });
 
-    // Función para cerrar el modal
-    closeModal.onclick = function () {
+    // Función para cerrar el modal al hacer clic en la "X" o fuera de la imagen
+    closeModal.addEventListener('click', () => {
         imgModal.style.display = "none";
-    }
-</script>
+    });
 
+    // Cerrar el modal al hacer clic fuera del contenido
+    window.addEventListener('click', (e) => {
+        if (e.target === imgModal) {
+            imgModal.style.display = "none";
+        }
+    });
+</script>
 </body>
 </html>
-
 
