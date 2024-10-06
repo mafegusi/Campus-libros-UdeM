@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intercambio y Venta de Libros - Universidad</title>
+    <title>Trueque y Venta de Libros</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
+        /* Estilos básicos para el header */
         header {
-            background-color: #003366;
+            background-color: #FF914D; /* Color naranjado */
             padding: 20px;
-            color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        header img {
-            max-height: 80px;
+        /* Estilos para el logo */
+        .logo a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
         }
 
-        nav {
-            margin-top: 10px;
+        /* Estilos para el título del header */
+        .header-title {
+            font-size: 34px;
+            color: white;
+            margin-left: 20px;
         }
 
+        /* Estilos para el menú de navegación */
         nav ul {
-            list-style: none;
-            padding: 0;
+            list-style-type: none;
             margin: 0;
+            padding: 0;
             display: flex;
         }
 
@@ -43,58 +44,239 @@
         nav ul li a {
             text-decoration: none;
             color: white;
-            padding: 10px 20px;
-            background-color: #005bb5;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            font-size: 18px;
         }
 
         nav ul li a:hover {
-            background-color: #007bff;
-        }
-
-        main {
-            padding: 20px;
-            background-color: #fff;
-        }
-
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            color: #FFC299; /* Color más claro al pasar el mouse */
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div>
-        <!-- Espacio para el logo de la universidad -->
-        <img src="logo_universidad.png" alt="Logo Universidad">
+    <!-- Logo de la empresa -->
+    <div class="logo">
+        <a href="#">Logo Empresa</a>
     </div>
+
+    <!-- Título del header -->
+    <div class="header-title">Campus Libros UdeM</div>
+
+    <!-- Menú de navegación -->
     <nav>
         <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Quiénes Somos</a></li>
             <li><a href="#">Libros</a></li>
-            <li><a href="#">Promociones</a></li>
+            <li><a href="#">Promoción</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
 </header>
 
-<main>
-    <h1>Bienvenidos al Portal de Intercambio y Venta de Libros</h1>
-    <p>Aquí podrás encontrar una amplia variedad de libros usados que otros estudiantes de la universidad ofrecen para intercambio o venta.</p>
-</main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trueque y Venta de Libros</title>
+    <style>
+        /* Estilos para la sección hero */
+        .hero {
+            background-color: #FF914D; /* Fondo naranjado */
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            background-image: url('fondo-libros.jpg'); /* Imagen de fondo (cámbiala por la tuya) */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 70vh; /* Ajuste de altura */
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Sombra oscura superpuesta para mejorar legibilidad */
+        }
 
-<footer>
-    <p>&copy; 2024 Universidad - Intercambio y Venta de Libros</p>
-</footer>
+        /* Estilos para el título */
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Estilos para la descripción */
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* Estilos para el botón de llamada a la acción */
+        .hero .cta-btn {
+            background-color: #FFD1B2;
+            color: #FF6F3C;
+            font-size: 18px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .hero .cta-btn:hover {
+            background-color: #FF6F3C;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sección Hero -->
+<section class="hero">
+    <h1>Descubre, Trueca y Vende Libros</h1>
+    <p>Intercambia tus libros favoritos, descubre nuevas lecturas y únete a nuestra comunidad de amantes de libros. ¡Encuentra historias inolvidables hoy mismo!</p>
+    <a href="#" class="cta-btn">Empezar Ahora</a>
+</section>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección de Producto</title>
+    <style>
+        /* Estilos para la sección de dos columnas */
+        .section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Estilos para las columnas */
+        .column {
+            flex: 1;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+            border-radius: 8px;
+        }
+
+        /* Estilos para la imagen */
+        .product-image {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        /* Estilos para el botón Comprar */
+        .buy-btn {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #FF914D;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            background-color: #FF6F3C;
+        }
+
+        /* Estilos para la imagen agrandada */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Estilos para el texto */
+        .text-column {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sección con dos columnas -->
+<section class="section">
+    <!-- Primera columna: Imagen y botón -->
+    <div class="column">
+        <img src="tu-imagen.jpg" alt="Producto" class="product-image" id="productImg">
+        <a href="#" class="buy-btn">Comprar</a>
+    </div>
+
+    <!-- Segunda columna: Texto descriptivo -->
+    <div class="column text-column">
+        <h2>Título del Producto</h2>
+        <p>Este es un excelente producto que puedes comprar en nuestra tienda. Es ideal para tus necesidades y te proporcionará una experiencia única. Además, es uno de nuestros productos más populares entre los clientes.</p>
+        <p>Características:
+            <ul>
+                <li>Alta calidad</li>
+                <li>Fácil de usar</li>
+                <li>Durable</li>
+                <li>Precio accesible</li>
+            </ul>
+        </p>
+    </div>
+</section>
+
+<!-- Modal para la imagen agrandada -->
+<div class="modal" id="imgModal">
+    <span class="close" id="closeModal">&times;</span>
+    <img id="modalImg">
+</div>
+
+<script>
+    // Obtener elementos de la imagen y el modal
+    const productImg = document.getElementById('productImg');
+    const imgModal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeModal = document.getElementById('closeModal');
+
+    // Función para agrandar la imagen al hacer clic
+    productImg.onclick = function () {
+        imgModal.style.display = "flex";
+        modalImg.src = this.src;
+    }
+
+    // Función para cerrar el modal
+    closeModal.onclick = function () {
+        imgModal.style.display = "none";
+    }
+</script>
 
 </body>
 </html>
