@@ -14,19 +14,23 @@
             align-items: center;
         }
 
-        /* Estilos para el logo */
-        .logo a {
-            text-decoration: none;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
+        /* Alineación izquierda para el contenido del header */
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Estilos para la imagen a la izquierda */
+        .header-left img {
+            height: 100px; /* Ajusta el tamaño de la imagen */
+            width: auto;
+            margin-right: 20px; /* Espacio entre la imagen y el título */
         }
 
         /* Estilos para el título del header */
         .header-title {
             font-size: 34px;
             color: white;
-            margin-left: 20px;
         }
 
         /* Estilos para el menú de navegación */
@@ -55,13 +59,13 @@
 <body>
 
 <header>
-    <!-- Logo de la empresa -->
-    <div class="logo">
-        <a href="#">Logo Empresa</a>
+    <!-- Sección izquierda del header con imagen y título -->
+    <div class="header-left">
+        <!-- Imagen a la izquierda -->
+        <img src="logo.jpg" alt="Logo de la empresa">
+        <!-- Título del header -->
+        <div class="header-title">Campus Libros UdeM</div>
     </div>
-
-    <!-- Título del header -->
-    <div class="header-title">Campus Libros UdeM</div>
 
     <!-- Menú de navegación -->
     <nav>
@@ -77,6 +81,8 @@
 
 </body>
 </html>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -740,5 +746,7 @@
         </ul>
     </div>
 </footer>
+
 </body>
 </html>
+
